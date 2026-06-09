@@ -60,14 +60,14 @@ st.markdown("""
 @st.cache_resource
 def load_models():
     try:
-        lr_model = joblib.load('../models/logistic_regression_model.pkl')
-        rf_model = joblib.load('../models/random_forest_model.pkl')
-        gb_model = joblib.load('../models/gradient_boosting_model.pkl')
-        scaler = joblib.load('../models/scaler.pkl')
-        label_encoders = joblib.load('../models/label_encoders.pkl')
-        feature_names = joblib.load('../models/feature_names.pkl')
-        model_metrics = joblib.load('../models/model_metrics.pkl')
-        feature_importance = joblib.load('../models/feature_importance.pkl')
+        lr_model = joblib.load(r'C:\Users\Neeraj_Thakur\OneDrive\Documents\APL Logistics ML Project\models\logistic_regression_model.pkl')
+        rf_model = joblib.load(r'C:\Users\Neeraj_Thakur\OneDrive\Documents\APL Logistics ML Project\models\random_forest_model.pkl')
+        gb_model = joblib.load(r'C:\Users\Neeraj_Thakur\OneDrive\Documents\APL Logistics ML Project\models\gradient_boosting_model.pkl')
+        scaler = joblib.load(r'C:\Users\Neeraj_Thakur\OneDrive\Documents\APL Logistics ML Project\models\scaler.pkl')
+        label_encoders = joblib.load(r'C:\Users\Neeraj_Thakur\OneDrive\Documents\APL Logistics ML Project\models\label_encoders.pkl')
+        feature_names = joblib.load(r'C:\Users\Neeraj_Thakur\OneDrive\Documents\APL Logistics ML Project\models\feature_names.pkl')
+        model_metrics = joblib.load(r'C:\Users\Neeraj_Thakur\OneDrive\Documents\APL Logistics ML Project\models\model_metrics.pkl')
+        feature_importance = joblib.load(r'C:\Users\Neeraj_Thakur\OneDrive\Documents\APL Logistics ML Project\models\feature_importance.pkl')
         return lr_model, rf_model, gb_model, scaler, label_encoders, feature_names, model_metrics, feature_importance
     except Exception as e:
         st.error(f"Error loading models: {str(e)}")
@@ -76,7 +76,7 @@ def load_models():
 # Load data for reference
 @st.cache_data
 def load_data():
-    df = pd.read_csv('../data/APL_Logistics_Data.csv', encoding='ISO-8859-1')
+    df = pd.read_csv(r'C:\Users\Neeraj_Thakur\OneDrive\Documents\APL Logistics ML Project\data\APL_Logistics_Data.csv', encoding='ISO-8859-1')
     df = df.dropna()
     return df
 
