@@ -354,7 +354,7 @@ class SupplyChainMLPipeline:
         
         print("All artifacts saved successfully")
     
-    def run_full_pipeline(self, output_dir='/home/claude/models'):
+    def run_full_pipeline(self, output_dir=r'C:\Users\Neeraj_Thakur\OneDrive\Documents\APL Logistics ML Project\models'):
         """Execute the complete pipeline"""
         import os
         os.makedirs(output_dir, exist_ok=True)
